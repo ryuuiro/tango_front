@@ -22,6 +22,8 @@ className = {styles.class_name}
 
 ## Run project commands
 
+**Run first backend project and after de next commands
+
 npm run install
 
 npm run start
