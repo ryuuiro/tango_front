@@ -1,15 +1,19 @@
 import React from 'react';
 import styles from './Result.module.css';
 
-const Calculator = () => {
+type ComponentProps = {
+    result: any;
+};
+
+const Calculator = ({ result }: ComponentProps) => {
     return (
         <div>
             <p className={styles.result}>
               Fibonacci Result: 
-              <span className={styles.result_number}> {8}</span>
+              <span className={styles.result_number}> {result}</span>
             </p>
         </div>
     );
-}
+};
 
 export default Calculator;

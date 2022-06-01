@@ -1,11 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Form.module.css';
 
-const Form = () => {
+type ComponentProps = {
+    calculate: (n: number) => void;
+};
+
+const Form = ({ calculate }: ComponentProps) => {
+    const [formNumber, setFormNumber] = useState(0);
+
     return (
         <div className={styles.form}>
-            <input className={styles.input} />
-            <div className={styles.button}> Calculate </div>
+            <input 
+                type="number"
+                className={styles.input} 
+                onChange={(e) => setFormNumber(Number(e.target.value))}
+            />
+            <div className={styles.button} onClick={() => calculate(formNumber)}> Calculate </div>
         </div>
     );
 }
