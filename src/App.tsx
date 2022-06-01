@@ -1,18 +1,13 @@
 import React from 'react';
 import Calculator from './views/Calculator';
-import './App.css';
+import styles from './App.module.css';
 
 const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Calculate Fibonacci!
-        </p>
-        <Calculator />
-      </header>
-    </div>
-  );
+    return (
+        <div className={styles.container}>
+            <Calculator />
+        </div>
+    );
 }
 
 export default App;
